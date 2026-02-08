@@ -1,0 +1,121 @@
+import { useState } from 'react';
+import './App.css';
+import { ExternalLink, Filter } from 'lucide-react'; 
+
+import { Navbar } from './components/Layout/Navbar';
+import { Footer } from './components/Layout/Footer';
+import { Hero } from './components/Hero/Hero';
+import { NewsCard } from './components/UI/NewsCard';
+import { TelemetryModal } from './components/UI/TelemetryModal';
+import { news } from './data/newsData';
+import { F1Calendar } from './components/Layout/F1Calendar';
+
+import logoTemplier from './assets/images/logo.png'; 
+
+const PartnerBanner = () => (
+  <section className="mt-6 bg-yellow-500 p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 skew-x-[-2deg] shadow-[10px_10px_0px_rgba(255,255,255,0.1)] border-y-4 border-black">
+    <div className="flex flex-col md:flex-row items-center gap-8 skew-x-[2deg]">
+      <div className="w-24 h-24 md:w-32 md:h-32 flex items-center justify-center p-2 border-4 border-black rotate-[-3deg] shadow-[4px_4px_0px_rgba(0,0,0,1)] bg-yellow-500">
+        <img 
+          src={logoTemplier} 
+          alt="Logo Templier Driver" 
+          className="w-full h-full object-contain"
+        />
+      </div>
+      <div className="text-center md:text-left">
+        <h2 className="text-black text-3xl md:text-4xl font-black italic mb-2 tracking-tighter uppercase">
+          PILOTAGE DE HAUT NIVEAU
+        </h2>
+        <div className="flex flex-col">
+          <p className="text-black font-black uppercase text-[10px] tracking-[0.2em] mb-1">Partenaire Officiel</p>
+          <p className="text-black/80 font-bold italic uppercase text-[10px] md:text-sm tracking-tight border-l-4 border-black pl-4">
+            Accédez au portail officiel de notre partenaire Templier Driver.
+          </p>
+        </div>
+      </div>
+    </div>
+    <a 
+      href="https://templierdriver.org/" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="bg-black !text-white px-10 py-5 font-black italic tracking-[0.2em] hover:bg-white hover:!text-black transition-all skew-x-[2deg] flex items-center gap-4 text-sm whitespace-nowrap"
+    >
+      ACCÉDER AU SITE <ExternalLink size={20} />
+    </a>
+  </section>
+);
+
+function App() {
+  const [activeDossier, setActiveDossier] = useState<any>(null);
+  
+  const [activeTournament, setActiveTournament] = useState('TOUS');
+
+  const tournamentCategories = ['TOUS', ...new Set(news.map(item => item.cat.toUpperCase()))];
+
+  const filteredNews = news.filter(item => {
+    if (activeTournament === 'TOUS') return true;
+    return item.cat.toUpperCase() === activeTournament;
+  });
+
+  return (
+    <div className="relative min-h-screen flex flex-col bg-[#0a0a0a] text-white font-sans uppercase">
+      <div className="racing-grid"></div>
+      <Navbar />
+      <main className="relative z-10">
+        <Hero />
+        
+        <section id="pitlane" className="px-6 max-w-7xl mx-auto pb-24 w-full">
+          
+          {/* BARRE DE FILTRES PAR TOURNOIS */}
+          <div className="flex flex-col md:flex-row md:items-center gap-6 mb-12 border-b border-white/10 pb-8">
+            <div className="flex items-center gap-2 text-yellow-500 min-w-fit">
+              <Filter size={14} />
+              <span className="text-[10px] font-black tracking-[0.3em]">FILTRE :</span>
+            </div>
+            
+            <div className="flex flex-wrap gap-2">
+              {tournamentCategories.map(cat => (
+                <button
+                  key={cat}
+                  onClick={() => setActiveTournament(cat)}
+                  className={`px-5 py-2 text-[10px] !font-black text-black italic skew-x-[-15deg] transition-all border ${
+                    activeTournament === cat 
+                      ? 'bg-yellow-500 text-black border-yellow-500 shadow-[4px_4px_0px_rgba(255,255,255,0.2)]' 
+                      : 'text-black/50 border-white/10 hover:border-yellow-500/50'
+                  }`}
+                >
+                  <span className="skew-x-[15deg] block uppercase whitespace-nowrap">{cat}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* GRILLE DE NEWS FILTRÉE */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+            {filteredNews.length > 0 ? (
+              filteredNews.map(item => (
+                <NewsCard key={item.id} item={item} onOpen={setActiveDossier} />
+              ))
+            ) : (
+              <div className="col-span-full py-20 text-center opacity-30 italic font-black text-xl tracking-tighter">
+                [!] AUCUNE INFORMATION POUR LE MOMENT
+              </div>
+            )}
+          </div>
+
+          <div className="mt-24">
+            <F1Calendar />
+          </div>
+          
+          <PartnerBanner />
+        </section>
+      </main>
+      <Footer />
+      {activeDossier && (
+        <TelemetryModal dossier={activeDossier} onClose={() => setActiveDossier(null)} />
+      )}
+    </div>
+  );
+}
+
+export default App;
