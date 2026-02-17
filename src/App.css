@@ -20,7 +20,7 @@ body {
   font-family: 'Oswald', sans-serif !important;
 }
 
-/* --- GRILLE DE FOND (Effet Garage/Paddock) --- */
+
 .racing-grid {
   background-image: 
     linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),

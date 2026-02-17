@@ -116,7 +116,6 @@ export const F1Calendar = () => {
         ))}
       </div>
 
-      {/* BOUTONS DE CONTRÔLE SORTIS DE LA CONDITION DE VISIBILITÉ */}
       <div className="mt-12 mb-12 flex justify-center">
         {visibleCount < filteredEvents.length ? (
           <button 

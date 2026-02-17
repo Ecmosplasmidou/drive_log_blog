@@ -1,9 +1,16 @@
+import logo from '../../assets/images/AD_2-snas-fond.png'
+
+
 export const Footer = () => (
   <footer className="mt-auto bg-black border-t-8 border-yellow-500 py-12 md:py-16 px-6">
     <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12">
-      <div className="text-center md:text-left italic">
-        <p className="font-black text-2xl md:text-3xl tracking-tighter mb-2 uppercase">APEX_DRIVE</p>
-        <p className="text-[10px] md:text-[11px] opacity-40 font-bold max-w-sm mx-auto md:mx-0 uppercase">
+      <div className="flex flex-col items-center md:items-start text-center md:text-left">
+        <img 
+          src={logo} 
+          alt="Logo Apex-Drive" 
+          className="w-20 h-20 object-contain mb-4"
+        />
+        <p className="text-[10px] md:text-[11px] opacity-40 font-bold max-w-xs md:max-w-sm mx-auto md:mx-0 uppercase leading-relaxed tracking-wider">
           LE BLOG RÉFÉRENCE POUR LES PASSIONNÉS DE VITESSE ET DE MÉCANIQUE DE PRÉCISION.
         </p>
       </div>
