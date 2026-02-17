@@ -5,7 +5,7 @@ import { Filter } from 'lucide-react';
 
 export const NewsGrid = () => {
   const [activeFilter, setActiveFilter] = useState('TOUT');
-  const [selectedDossier, setSelectedDossier] = useState(null);
+  // const [selectedDossier, setSelectedDossier] = useState(null);
 
   const filters = ['TOUT', 'Technique', 'Écuries', 'Circuits', 'Marques'];
 
@@ -17,7 +17,6 @@ export const NewsGrid = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-10">
-      {/* BARRE DE FILTRES */}
       <div className="flex flex-wrap items-center gap-4 mb-10 border-b border-white/10 pb-6">
         <div className="flex items-center gap-2 text-yellow-500 mr-4">
           <Filter size={16} />
@@ -39,7 +38,6 @@ export const NewsGrid = () => {
         ))}
       </div>
 
-      {/* GRILLE */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredNews.map(item => (
           <NewsCard 
