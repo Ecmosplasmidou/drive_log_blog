@@ -1,0 +1,26 @@
+const currentYear = 2026;
+
+export const motoGPData = [
+    { id: 'm-1', type: 'MOTOGP', title: 'GP du Thaïlande', track: 'Buriram', date: new Date(`${currentYear}-03-01T08:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-2', type: 'MOTOGP', title: 'GP d\'Argentine', track: 'Termas de Río Hondo', date: new Date(`${currentYear}-03-15T18:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-3', type: 'MOTOGP', title: 'GP des Amériques', track: 'Austin', date: new Date(`${currentYear}-04-05T19:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-4', type: 'MOTOGP', title: 'GP du Qatar', track: 'Lusail', date: new Date(`${currentYear}-04-12T17:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-5', type: 'MOTOGP', title: 'GP d\'Espagne', track: 'Jerez', date: new Date(`${currentYear}-04-26T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-6', type: 'MOTOGP', title: 'GP de France', track: 'Le Mans', date: new Date(`${currentYear}-05-10T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-7', type: 'MOTOGP', title: 'GP de Grande-Bretagne', track: 'Silverstone', date: new Date(`${currentYear}-05-24T14:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-8', type: 'MOTOGP', title: 'GP d\'Aragon', track: 'MotorLand Aragón', date: new Date(`${currentYear}-06-07T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-9', type: 'MOTOGP', title: 'GP d\'Italie', track: 'Mugello', date: new Date(`${currentYear}-06-21T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-10', type: 'MOTOGP', title: 'GP des Pays-Bas', track: 'Assen', date: new Date(`${currentYear}-06-28T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-11', type: 'MOTOGP', title: 'GP d\'Allemagne', track: 'Sachsenring', date: new Date(`${currentYear}-07-12T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-12', type: 'MOTOGP', title: 'GP de République Tchèque', track: 'Brno', date: new Date(`${currentYear}-07-19T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-13', type: 'MOTOGP', title: 'GP d\'Autriche', track: 'Red Bull Ring', date: new Date(`${currentYear}-08-16T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-14', type: 'MOTOGP', title: 'GP de Hongrie', track: 'Balaton Park', date: new Date(`${currentYear}-08-23T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-15', type: 'MOTOGP', title: 'GP de Catalogne', track: 'Barcelone', date: new Date(`${currentYear}-09-06T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-16', type: 'MOTOGP', title: 'GP de Saint-Marin', track: 'Misano', date: new Date(`${currentYear}-09-13T12:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-17', type: 'MOTOGP', title: 'GP du Japon', track: 'Motegi', date: new Date(`${currentYear}-09-27T07:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-18', type: 'MOTOGP', title: 'GP d\'Indonésie', track: 'Mandalika', date: new Date(`${currentYear}-10-04T08:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-19', type: 'MOTOGP', title: 'GP d\'Australie', track: 'Phillip Island', date: new Date(`${currentYear}-10-18T05:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-20', type: 'MOTOGP', title: 'GP de Malaisie', track: 'Sepang', date: new Date(`${currentYear}-10-25T08:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-21', type: 'MOTOGP', title: 'GP du Portugal', track: 'Portimão', date: new Date(`${currentYear}-11-08T13:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+    { id: 'm-22', type: 'MOTOGP', title: 'GP de Valence', track: 'Ricardo Tormo', date: new Date(`${currentYear}-11-22T13:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
+];

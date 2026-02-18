@@ -1,0 +1,28 @@
+const currentYear = 2026;
+
+export const f1Data = [
+    { id: 'f1-1', type: 'F1', title: 'GP d\'Australie', track: 'Melbourne', date: new Date(`${currentYear}-03-15T06:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-2', type: 'F1', title: 'GP de Chine', track: 'Shanghai', date: new Date(`${currentYear}-03-22T07:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-3', type: 'F1', title: 'GP du Japon', track: 'Suzuka', date: new Date(`${currentYear}-04-05T05:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-4', type: 'F1', title: 'GP de Bahreïn', track: 'Sakhir', date: new Date(`${currentYear}-04-19T15:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-5', type: 'F1', title: 'GP d\'Arabie Saoudite', track: 'Djeddah', date: new Date(`${currentYear}-04-26T17:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-6', type: 'F1', title: 'GP de Miami', track: 'Miami', date: new Date(`${currentYear}-05-10T19:30:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-7', type: 'F1', title: 'GP d\'Émilie-Romagne', track: 'Imola', date: new Date(`${currentYear}-05-24T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-8', type: 'F1', title: 'GP de Monaco', track: 'Monaco', date: new Date(`${currentYear}-05-31T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-9', type: 'F1', title: 'GP d\'Espagne', track: 'Barcelone', date: new Date(`${currentYear}-06-07T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-10', type: 'F1', title: 'GP du Canada', track: 'Montréal', date: new Date(`${currentYear}-06-21T18:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-11', type: 'F1', title: 'GP d\'Autriche', track: 'Spielberg', date: new Date(`${currentYear}-07-05T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-12', type: 'F1', title: 'GP de Grande-Bretagne', track: 'Silverstone', date: new Date(`${currentYear}-07-12T14:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-13', type: 'F1', title: 'GP de Belgique', track: 'Spa-Francorchamps', date: new Date(`${currentYear}-07-26T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-14', type: 'F1', title: 'GP de Hongrie', track: 'Budapest', date: new Date(`${currentYear}-08-02T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-15', type: 'F1', title: 'GP des Pays-Bas', track: 'Zandvoort', date: new Date(`${currentYear}-08-30T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-16', type: 'F1', title: 'GP d\'Italie', track: 'Monza', date: new Date(`${currentYear}-09-06T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-17', type: 'F1', title: 'GP d\'Azerbaïdjan', track: 'Bakou', date: new Date(`${currentYear}-09-20T11:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-18', type: 'F1', title: 'GP de Singapour', track: 'Marina Bay', date: new Date(`${currentYear}-10-04T12:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-19', type: 'F1', title: 'GP des États-Unis', track: 'Austin', date: new Date(`${currentYear}-10-18T19:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-20', type: 'F1', title: 'GP du Mexique', track: 'Mexico City', date: new Date(`${currentYear}-10-25T19:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-21', type: 'F1', title: 'GP du Brésil', track: 'Interlagos', date: new Date(`${currentYear}-11-08T17:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-22', type: 'F1', title: 'GP de Las Vegas', track: 'Las Vegas Strip', date: new Date(`${currentYear}-11-22T06:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-23', type: 'F1', title: 'GP du Qatar', track: 'Lusail', date: new Date(`${currentYear}-11-29T16:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+    { id: 'f1-24', type: 'F1', title: 'GP d\'Abu Dhabi', track: 'Yas Marina', date: new Date(`${currentYear}-12-06T13:00:00Z`), color: 'text-red-500', border: 'border-red-500' },
+];

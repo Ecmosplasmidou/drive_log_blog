@@ -63,10 +63,7 @@ function App() {
       <Navbar />
       <main className="relative z-10">
         <Hero />
-        
         <section id="pitlane" className="px-6 max-w-7xl mx-auto pb-24 w-full">
-          
-          {/* BARRE DE FILTRES PAR TOURNOIS */}
           <div className="flex flex-col md:flex-row md:items-center gap-6 mb-12 border-b border-white/10 pb-8">
             <div className="flex items-center gap-2 text-yellow-500 min-w-fit">
               <Filter size={14} />
@@ -90,7 +87,6 @@ function App() {
             </div>
           </div>
 
-          {/* GRILLE DE NEWS FILTRÉE */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {filteredNews.length > 0 ? (
               filteredNews.map(item => (

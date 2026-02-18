@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import { Flag, Calendar, MapPin, Loader2, ChevronDown } from 'lucide-react';
 
+import { motoGPData } from '../../data/motoGpCalendarData'
+import { f1Data } from '../../data/F1CalendarData'
+
 export const F1Calendar = () => {
   const [events, setEvents] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -10,31 +13,21 @@ export const F1Calendar = () => {
   useEffect(() => {
     const fetchAllRaces = async () => {
       try {
-        const currentYear = new Date().getFullYear()
-        const f1Res = await fetch(`https://api.openf1.org/v1/sessions?session_name=Race&year=${currentYear}`);
-        const f1Data = await f1Res.json();
+        // const currentYear = new Date().getFullYear()
+        // const f1Res = await fetch(`https://api.openf1.org/v1/sessions?session_name=Race&year=${currentYear}`);
+        // const f1Data = await f1Res.json();
         
-        const f1Formatted = f1Data.map((r: any) => ({
-          id: `f1-${r.session_key}`,
-          type: 'F1',
-          title: `${r.location} GP`,
-          track: r.circuit_short_name,
-          date: new Date(r.date_start),
-          color: 'text-red-600',
-          border: 'border-red-600'
-        }));
+        // const f1Formatted = f1Data.map((r: any) => ({
+        //   id: `f1-${r.session_key}`,
+        //   type: 'F1',
+        //   title: `${r.location} GP`,
+        //   track: r.circuit_short_name,
+        //   date: new Date(r.date_start),
+        //   color: 'text-red-600',
+        //   border: 'border-red-600'
+        // }));
 
-        const motoGPData = [
-          { id: 'm-1', type: 'MOTOGP', title: 'GP du Qatar', track: 'Lusail', date: new Date(`${currentYear}-03-08T17:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
-          { id: 'm-2', type: 'MOTOGP', title: 'GP du Portugal', track: 'Portimão', date: new Date(`${currentYear}-03-22T14:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
-          { id: 'm-3', type: 'MOTOGP', title: 'GP des Amériques', track: 'Austin', date: new Date(`${currentYear}-04-05T20:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
-          { id: 'm-4', type: 'MOTOGP', title: 'GP d\'Espagne', track: 'Jerez', date: new Date(`${currentYear}-04-26T14:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
-          { id: 'm-5', type: 'MOTOGP', title: 'GP de France', track: 'Le Mans', date: new Date(`${currentYear}-05-10T14:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
-          { id: 'm-6', type: 'MOTOGP', title: 'GP d\'Italie', track: 'Mugello', date: new Date(`${currentYear}-05-31T14:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
-          { id: 'm-7', type: 'MOTOGP', title: 'GP d\'Allemagne', track: 'Sachsenring', date: new Date(`${currentYear}-06-21T14:00:00Z`), color: 'text-blue-500', border: 'border-blue-500' },
-        ];
-
-        const combined = [...f1Formatted, ...motoGPData]
+        const combined = [...f1Data, ...motoGPData]
           .sort((a, b) => a.date.getTime() - b.date.getTime());
 
         setEvents(combined);

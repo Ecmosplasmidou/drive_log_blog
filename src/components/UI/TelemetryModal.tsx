@@ -7,7 +7,6 @@ interface TelemetryModalProps {
 
 export const TelemetryModal = ({ dossier, onClose }: TelemetryModalProps) => (
   <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-6 bg-black/95 backdrop-blur-md">
-    {/* Ajout de max-h-[90vh] et overflow-y-auto pour le scroll */}
     <div className="bg-[#111] max-w-2xl w-full p-6 md:p-10 relative border-l-8 border-yellow-500 shadow-2xl animate-in zoom-in duration-300 max-h-[90vh] overflow-y-auto custom-scrollbar">
       
       <button 

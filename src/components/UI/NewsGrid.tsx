@@ -5,7 +5,6 @@ import { Filter } from 'lucide-react';
 
 export const NewsGrid = () => {
   const [activeFilter, setActiveFilter] = useState('TOUT');
-  // const [selectedDossier, setSelectedDossier] = useState(null);
 
   const filters = ['TOUT', 'Technique', 'Écuries', 'Circuits', 'Marques'];
 
