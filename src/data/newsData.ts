@@ -1,6 +1,13 @@
-import hamiltonFerrariNews from "../assets/images/hammilton_ferrari.png";
-import astonMartinNews from "../assets/images/aston_martin-news.png";
-import motoGpNews from "../assets/images/motoGp_news.png";
+import hamiltonFerrariNews from "../assets/dataImages/hammilton_ferrari.png";
+import astonMartinNews from "../assets/dataImages/aston_martin-news.png";
+import motoGpNews from "../assets/dataImages/motoGp_news.png";
+import audiNews from "../assets/dataImages/audinews.png";
+import efuelsNews from "../assets/dataImages/efuelsnews.png";
+import motoGpaeroNews from "../assets/dataImages/motgpaeronews.png";
+import verstappenNews from '../assets/dataImages/maxversapatinews.png';
+import alpineWecNews from '../assets/dataImages/alpinenews.png';
+import aiRacingNews from '../assets/dataImages/airacingnews.png';
+import madridGpNews from '../assets/dataImages/madridgpnews.png'
 
 export const news = [
   {
@@ -8,7 +15,7 @@ export const news = [
     cat: "FORMULE 1",
     type: "TECH_ANALYSIS",
     title: "L'Ère Hamilton-Ferrari : Premier roulage à Fiorano",
-    image: "hamiltonFerrariNews",
+    image: hamiltonFerrariNews,
     desc: "Lewis Hamilton a effectué ses premiers tours de roue officiels avec la Scuderia Ferrari, marquant le début du transfert le plus attendu de l'histoire.",
     date: "15.02.26",
     tags: ["Scuderia_Ferrari", "Hamilton", "F1_2026", "Technique"],
@@ -24,7 +31,7 @@ export const news = [
     cat: "WEC / HYPERCAR",
     type: "ENDURANCE_LOG",
     title: "Aston Martin Valkyrie : Le Mans en ligne de mire",
-    image: "astonMartinNews",
+    image: astonMartinNews,
     desc: "Le prototype Valkyrie LMH a terminé ses tests d'endurance de 24 heures à Portimão sans aucun problème mécanique majeur.",
     date: "12.02.26",
     tags: ["Aston_Martin", "V12_Cosworth", "WEC", "LeMans"],
@@ -40,7 +47,7 @@ export const news = [
     cat: "MOTO GP",
     type: "FACTORY_INTEL",
     title: "BMW M 1000 RR : Entrée confirmée en MotoGP 2027",
-    image: "motoGpNews",
+    image: motoGpNews,
     desc: "Le constructeur bavarois a officiellement racheté les données de Suzuki pour accélérer le développement de son prototype 850cc.",
     date: "10.02.26",
     tags: ["BMW_M", "MotoGP_2027", "850cc", "Bavaria_Tech"],
@@ -56,7 +63,7 @@ export const news = [
     cat: "FORMULE 1",
     type: "ENGINE_INTEL",
     title: "Audi F1 : Les secrets de l'unité de puissance de Neubourg",
-    image: "audiF1News",
+    image: audiNews,
     desc: "Audi dévoile les premiers chiffres de son unité de puissance alors que les tests au banc d'essai s'intensifient.",
     date: "08.02.26",
     tags: ["Audi_Sport", "Neubourg", "Moteur_2026", "Sauber"],
@@ -72,7 +79,7 @@ export const news = [
     cat: "TECH & FUTURE",
     type: "SUSTAINABILITY",
     title: "E-Fuels : La révolution chimique de 2026 est là",
-    image: "efuelNews",
+    image: efuelsNews,
     desc: "Le passage au carburant 100% durable change la donne pour la combustion interne en compétition.",
     date: "05.02.26",
     tags: ["E-Fuel", "Aramco", "Decarbonization", "F1_2026"],
@@ -88,7 +95,7 @@ export const news = [
     cat: "MOTO GP",
     type: "TECH_LOG",
     title: "Aéro MotoGP : La guerre des 'Ground Effects' s'intensifie",
-    image: "motoGpaeroNews",
+    image: motoGpaeroNews,
     desc: "Ducati et Aprilia testent des carénages inférieurs capables de générer un effet de sol même à haute inclinaison.",
     date: "03.02.26",
     tags: ["Ducati_Corse", "Aprilia_Racing", "Aérodynamique", "Gigi_DallIgna"],
@@ -104,7 +111,7 @@ export const news = [
     cat: "FORMULE 1",
     type: "DRIVER_LOG",
     title: "Max Verstappen et le projet Red Bull-Ford",
-    image: "verstappenNews",
+    image: verstappenNews,
     desc: "Des rumeurs de tensions émergent concernant la puissance moteur du futur bloc Red Bull Powertrains.",
     date: "01.02.26",
     tags: ["Max_Verstappen", "RedBull_Racing", "Ford", "Market_Transfer"],
@@ -120,7 +127,7 @@ export const news = [
     cat: "WEC / HYPERCAR",
     type: "NEW_ENTRY",
     title: "Alpine A424 : Le défi de l'endurance à la française",
-    image: "alpineWecNews",
+    image: alpineWecNews,
     desc: "L'écurie française peaufine son système hybride avant l'ouverture de la saison au Qatar.",
     date: "28.01.26",
     tags: ["Alpine_Racing", "Signatech", "Hypercar", "Mick_Schumacher"],
@@ -136,7 +143,7 @@ export const news = [
     cat: "FORMULE 1",
     type: "CIRCUIT_NEWS",
     title: "GP de Madrid : Un tracé hybride révolutionnaire",
-    image: "madridGpNews",
+    image: madridGpNews,
     desc: "Le circuit de Madrid promet d'être le plus technologique du calendrier avec des zones de recharge par induction.",
     date: "25.01.26",
     tags: ["Madrid_GP", "IFEMA", "Urban_Circuit", "F1_2026"],
@@ -152,7 +159,7 @@ export const news = [
     cat: "TECH & FUTURE",
     type: "AI_IN_RACING",
     title: "L'IA remplace-t-elle les ingénieurs de piste ?",
-    image: "aiRacingNews",
+    image: aiRacingNews,
     desc: "Les écuries de pointe utilisent désormais des modèles de langage Large Language Models (LLM) pour l'analyse de stratégie en temps réel.",
     date: "22.01.26",
     tags: ["IA", "Machine_Learning", "Strategie", "Big_Data"],
