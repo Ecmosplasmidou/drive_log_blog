@@ -7,29 +7,14 @@ import { f1Data } from '../../data/F1CalendarData'
 export const F1Calendar = () => {
   const [events, setEvents] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
-  const [filter, setFilter] = useState<'ALL' | 'F1' | 'MOTOGP'>('ALL');
+  const [filter, setFilter] = useState<'TOUS' | 'F1' | 'MOTOGP'>('TOUS');
   const [visibleCount, setVisibleCount] = useState(6);
 
   useEffect(() => {
     const fetchAllRaces = async () => {
       try {
-        // const currentYear = new Date().getFullYear()
-        // const f1Res = await fetch(`https://api.openf1.org/v1/sessions?session_name=Race&year=${currentYear}`);
-        // const f1Data = await f1Res.json();
-        
-        // const f1Formatted = f1Data.map((r: any) => ({
-        //   id: `f1-${r.session_key}`,
-        //   type: 'F1',
-        //   title: `${r.location} GP`,
-        //   track: r.circuit_short_name,
-        //   date: new Date(r.date_start),
-        //   color: 'text-red-600',
-        //   border: 'border-red-600'
-        // }));
-
         const combined = [...f1Data, ...motoGPData]
           .sort((a, b) => a.date.getTime() - b.date.getTime());
-
         setEvents(combined);
       } catch (err) {
         console.error("Erreur chargement calendriers:", err);
@@ -37,12 +22,11 @@ export const F1Calendar = () => {
         setLoading(false);
       }
     };
-
     fetchAllRaces();
   }, []);
 
   const filteredEvents = events.filter(event => {
-    if (filter === 'ALL') return true;
+    if (filter === 'TOUS') return true;
     return event.type === filter;
   });
 
@@ -68,7 +52,7 @@ export const F1Calendar = () => {
         </div>
 
         <div className="flex gap-2">
-          {['ALL', 'F1', 'MOTOGP'].map((f) => (
+          {['TOUS', 'F1', 'MOTOGP'].map((f) => (
             <button
               key={f}
               onClick={() => { setFilter(f as any); setVisibleCount(6); }}
